@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Session Manager</title>
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sessions">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/svg+xml" href="pwa-icon.svg">
+<link rel="apple-touch-icon" href="pwa-icon-192.png">
 <style>
 *{margin:0;padding:0}
 html,body{height:100%;overflow:hidden;background:#111}
 iframe{width:100%;height:100%;border:none}
-.error{color:#d1d5db;font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;height:100%;display:none}
-.error a{color:#f97316}
 </style>
 </head>
 <body>
 <iframe id="frame" src="https://electronic-dating-loaded-bent.trycloudflare.com" allow="clipboard-read;clipboard-write"></iframe>
-<div class="error" id="err"><p>Failed to load. <a href="https://electronic-dating-loaded-bent.trycloudflare.com">Direct link</a></p></div>
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}</script>
 </body>
 </html>
